@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="WEB-INF/js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <div style="color: red" v-text="msg1"></div>
+    <div style="color: blue" v-html="msg2"></div>
+</div>
+<script>
+    var vue = new Vue({
+        el: "#app",
+        data: {
+            msg1: "helloword",
+            msg2: "<h1>你好世界</h1>"
+        },
+        methods: {
+
+        },
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+    <form action="#" method="post">
+        用户名<input type="text" name="username"  onblur="chenkUsername(this.value)">
+        <span id="uspan" style="color: red"></span>
+    </form>
+<script>
+    function chenkUsername(username) {
+        $.post("/ajax/User","action=findname&username="+username,function (result) {
+            if (result.flag) {
+                if (result.user) {
+                    $("#uspan").html("可用")
+                }else{
+                    $("#uspan").html("不用")
+                }
+            }else{
+                $("#uspan").html(result.errrEning)
+            }
+        },"json")
+    }
+</script>
+</body>
+</html>

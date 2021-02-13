@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue入门</title>
+    <script src="WEB-INF/js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="msg">{{message}}</div>
+        <input type="text" value="按钮" @cli>
+    </div>
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data:{
+            message:"你好世界"
+        }
+    });
+</script>
+</body>
+</html>
