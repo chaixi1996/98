@@ -27,6 +27,7 @@ public class AccountServlet extends HttpServlet {
         String from = request.getParameter("from");
         String to = request.getParameter("to");
         Double money = Double.valueOf(request.getParameter("money"));
+		system.out.println("adminam带你");
 
         AccountService accountService = new AccountService();
         try {
