@@ -17,8 +17,8 @@ import java.sql.SQLException;
 public class Userservice {
 
     public static User findByname(String username) throws SQLException {
-        UserDao userDao = new UserDao();
-        User user = userDao.findUser(username);
+        UserDao userDaos = new UserDao();
+        User user = userDaos.findUser(username);
         return user;
     }
 }
