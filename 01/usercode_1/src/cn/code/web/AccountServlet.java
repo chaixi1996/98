@@ -34,7 +34,7 @@ public class AccountServlet extends HttpServlet {
             response.getWriter().write("转账成功");
         } catch (Exception e) {
             e.printStackTrace();
-            response.getWriter().write("转账失败");
+            response.getWriter().write("转账失败了");
         }
 
 
