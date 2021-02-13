@@ -18,7 +18,7 @@ public class Userservice {
 
     public static User findByname(String username) throws SQLException {
         UserDao userDaos = new UserDao();
-        User user = userDaos.findUser(username);
-        return user;
+        User usera = userDaos.findUser(username);
+        return usera;
     }
 }
