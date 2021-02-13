@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="WEB-INF/js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+    <div id="app">
+        <a v-bind:href="url">跳转百度</a>
+        <a v-bind:href="'http://www.qq.com?id='+id">跳转腾讯网</a>
+        <form>
+            用户名<input type="text" name="username" v-model="user.username">
+            密码<input type="text" name="password" v-model="user.password">
+
+            <input type="button" value="点击" @click="fn1">
+        </form>
+    </div>
+    <script>
+        var vue = new Vue({
+            el:"#app",
+            data:{
+                user:{
+                    username:"zs",
+                    password:"123"
+                }
+            },
+            methods:{
+                obtainFrom(){
+                    console.log(this.user)
+                }
+            },
+        });
+    </script>
+</body>
+</html>

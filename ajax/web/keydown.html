@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>键盘按键事件</title>
+    <script src="WEB-INF/js/vuejs-2.5.16.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-on:keydown="fn1($event)">
+</div>
+<script>
+    var vue = new Vue({
+        el: "#app",
+        data: {},
+        method: {
+            fn1(e) {
+                //获取键码值
+                var keyCode = e.keyCode;
+                if (keyCode != 8) {
+                    //判断键码值是否在48到57之间
+                    if (keyCode < 48 || keyCode > 57) {
+                        //如果是阻止事件
+                        e.preventDefault()
+                    }
+
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

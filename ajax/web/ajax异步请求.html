@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax异步请求</title>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+<body>
+    <div id="msg" style="color: brown"></div>
+    <a href="javascript:;" onclick="get()">异步get请求</a>
+    <a href="javascript:;" onclick="">异步post请求</a>
+</body>
+ <script>
+     function get() {
+        $.get("/ajax/demo1?username=tom",function (res) {
+            $("#msg").html(res)
+        })
+     }
+     function post() {
+         $.post("/ajax/demo1","username=tom",function (res) {
+             $("#msg").html(res)
+         })
+     }
+
+ </script>
+</html>
